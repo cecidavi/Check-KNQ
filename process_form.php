@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $operador = $conn->real_escape_string($_POST['operador'] ?? '');
     $planta = $conn->real_escape_string($_POST['planta'] ?? '');
     $unidad = $conn->real_escape_string($_POST['unidad'] ?? '');
+    $fecha = $conn->real_escape_string($_POST['fecha'] ?? '');
 
     // Interior
     $tablero = $conn->real_escape_string($_POST['tablero'] ?? '');
@@ -69,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     $sql = "INSERT INTO inspeccion_unidad (
-    operador, planta, unidad, tablero, asientos, tapiceria, cinturones, pasamanos,  
+    operador, planta, unidad, fecha, tablero, asientos, tapiceria, cinturones, pasamanos,  
     retrovisor_pasillo, botiquin, extintor, alarma_reversa, luces_interiores, luces_escalera,  
     puertas, salida_emergencia, asiento_operador, cables_expuestos, poliza_seguro, tarjeta_circulacion,  
     retrovisor, luces_funcionando, luces_navegacion, intermitentes_funcionando, 
@@ -77,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     placas, fuga, micas, bateria_1, bateria_2, interior_limpieza, lateral_izquierdo, lateral_derecho, frontal, tracero, uniforme, alcoholimetia,
     aceite, anticongelante, liquidofrenos, direccionhidraulica
 ) VALUES (
-    '$operador', '$planta', '$unidad', '$tablero', '$asientos', '$tapiceria', '$cinturones', '$pasamanos', 
+    '$operador', '$planta', '$unidad', '$fecha', '$tablero', '$asientos', '$tapiceria', '$cinturones', '$pasamanos', 
     '$retrovisor_pasillo', '$botiquin', '$extintor', '$alarma_reversa', '$luces_interiores', '$luces_escalera', 
     '$puertas', '$salida_emergencia', '$asiento_operador', '$cables_expuestos', '$poliza_seguro', '$tarjeta_circulacion', 
     '$retrovisor', '$luces_funcionando', '$luces_navegacion', '$intermitentes_funcionando', 

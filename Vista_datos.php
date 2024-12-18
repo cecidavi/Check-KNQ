@@ -34,6 +34,7 @@ if ($result->num_rows > 0) {
                     <th>Operador</th>
                     <th>Ruta</th>
                     <th>Unidad</th>
+                    <th>Fecha</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -44,9 +45,10 @@ if ($result->num_rows > 0) {
                             <td><?php echo htmlspecialchars($registro['operador']); ?></td>
                             <td><?php echo htmlspecialchars($registro['planta']); ?></td>
                             <td><?php echo htmlspecialchars($registro['unidad']); ?></td>
+                            <td><?php echo htmlspecialchars($registro['fecha']); ?></td>
                             <td>
-                                <a href="editar.php?id=<?php echo $registro['id']; ?>" class="btn btn-warning btn-sm">Ver</a> 
-                                <a href="eliminar.php?id=<?php echo $registro['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')">Eliminar</a>
+                            <a href="ver-registro.php?id=<?php echo $registro['id']; ?>" class="btn btn-warning btn-sm">Ver</a>
+                            <a href="eliminar.php?id=<?php echo $registro['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')">Eliminar</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

@@ -20,7 +20,18 @@
                 <label for="planta">Ruta:</label>
                 <input type="text" id="planta" name="planta" required>
             </div>
-            
+
+            <div class="form-group">
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" name="fecha" class="form-control" required readonly>
+</div>
+
+            <script>
+    // Obtener la fecha actual en formato YYYY-MM-DD
+    const today = new Date().toISOString().split('T')[0];
+    // Asignar la fecha actual al campo de fecha
+    document.getElementById('fecha').value = today;
+</script>
 
             <h2>Unidad a Evaluar</h2>
             <input type="text" name="unidad" required>
