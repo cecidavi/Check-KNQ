@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Check List</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -16,9 +17,10 @@
                 <input type="text" id="operador" name="operador" required>
             </div>
             <div class="form-group">
-                <label for="planta">Planta:</label>
+                <label for="planta">Ruta:</label>
                 <input type="text" id="planta" name="planta" required>
             </div>
+            
 
             <h2>Unidad a Evaluar</h2>
             <input type="text" name="unidad" required>
@@ -238,9 +240,9 @@
                 </tr>
                 <tr>
                     <td>Fuga Agua / Disel / Otra</td>
-                    <td><input type="radio" name="Fugas" value="Si" required></td>
-                    <td><input type="radio" name="Fugas" value="No" required></td>
-                    <td><input type="radio" name="Fugas" value="No Aplica" required></td>
+                    <td><input type="radio" name="Fuga" value="Si" required></td>
+                    <td><input type="radio" name="Fuga" value="No" required></td>
+                    <td><input type="radio" name="Fuga" value="No Aplica" required></td>
 
                 </tr>
                 <tr>
@@ -259,9 +261,9 @@
                 </tr>
                 <tr>
                     <td>Bateria 2</td>
-                    <td><input type="radio" name="tapiceria_2" value="Si" required></td>
-                    <td><input type="radio" name="tapiceria_2" value="No" required></td>
-                    <td><input type="radio" name="tapiceria_2" value="No Aplica" required></td>
+                    <td><input type="radio" name="Bateria_2" value="Si" required></td>
+                    <td><input type="radio" name="Bateria_2" value="No" required></td>
+                    <td><input type="radio" name="Bateria_2" value="No Aplica" required></td>
 
                 </tr>
             </table>
@@ -275,9 +277,9 @@
                 </tr>
                 <tr>
                     <td>Interior</td>
-                    <td><input type="radio" name="Interior_limpieza" value="Si" required></td>
-                    <td><input type="radio" name="Interior_limpieza" value="No" required></td>
-                    <td><input type="radio" name="Interior_limpieza" value="No Aplica" required></td>
+                    <td><input type="radio" name="interior_limpieza" value="Si" required></td>
+                    <td><input type="radio" name="interior_limpieza" value="No" required></td>
+                    <td><input type="radio" name="interior_limpieza" value="No Aplica" required></td>
 
                 </tr>
                 <tr>
@@ -345,7 +347,7 @@
                 </tr>
 
                 <tr>
-                    <td>Agua</td>
+                    <td>Aceite</td>
                     <td><input type="radio" name="aceite" value="Si" required></td>
                     <td><input type="radio" name="aceite" value="No" required></td>
                     <td><input type="radio" name="aceite" value="No Aplica" required></td>
@@ -383,5 +385,6 @@
             <button type="submit">Enviar</button>
         </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

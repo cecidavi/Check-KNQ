@@ -12,11 +12,11 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    border: 2px solid #007bff; 
+    border: 2px solid #007bff;
 }
 
 h1 {
-    color: #ff0000; 
+    color: #ff0000;
     text-align: center;
 }
 
@@ -45,7 +45,7 @@ input[type="radio"] {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
-    border: 1px solid #007bff; 
+    border: 1px solid #007bff;
 }
 
 table {
@@ -61,11 +61,11 @@ th, td {
 }
 
 th {
-    background-color: #cce5ff; 
+    background-color: #cce5ff;
 }
 
 button {
-    background-color: #007bff; 
+    background-color: #007bff;
     color: white;
     padding: 10px;
     border: none;
@@ -75,5 +75,56 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95%; /* Aumenta el ancho del contenedor en pantallas más pequeñas */
+        padding: 15px; /* Ajusta el espaciado */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Ajusta el tamaño del título */
+    }
+
+    .logo {
+        width: 120px; /* Ajusta el tamaño del logo */
+    }
+
+    form {
+        padding: 10px; /* Reduce el espacio dentro del formulario */
+    }
+
+    .form-group {
+        margin-bottom: 12px; /* Reduce los márgenes */
+    }
+
+    input[type="text"],
+    input[type="radio"],
+    button {
+        padding: 12px; /* Aumenta el área de clic para los campos y botones */
+        font-size: 16px; /* Aumenta el tamaño de la fuente para una mejor legibilidad */
+        border-radius: 5px; /* Bordes redondeados para hacerlo más estético */
+    }
+
+    table {
+        width: 100%;
+        font-size: 12px; /* Reduce el tamaño de la fuente de la tabla */
+    }
+
+    th, td {
+        padding: 6px; /* Ajusta el espaciado de la tabla */
+    }
+
+    table {
+        display: block; /* Hace la tabla desplazable */
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        display: block; /* Hace que las celdas se apilen en lugar de estar en una fila */
+    }
 }

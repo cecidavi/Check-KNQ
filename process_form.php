@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $retrovisores_laterales = $conn->real_escape_string($_POST['Retrovisores_Laterales'] ?? '');
     $carroceria = $conn->real_escape_string($_POST['Carroceria'] ?? '');
     $cristales = $conn->real_escape_string($_POST['Cristales'] ?? '');
-    $calcamonias = $conn->real_escape_string($_POST['Calcamonias'] ?? '');
+    $calcamonias = $conn->real_escape_string($_POST['calcamonias'] ?? '');
     $placas = $conn->real_escape_string($_POST['Placas'] ?? '');
     $fuga = $conn->real_escape_string($_POST['Fuga'] ?? '');
     $micas = $conn->real_escape_string($_POST['Micas'] ?? '');
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bateria_2 = $conn->real_escape_string($_POST['Bateria_2'] ?? '');
 
     // Limpieza
-    $interior_limpieza = $conn->real_escape_string($_POST['Interior_Limpieza'] ?? '');
+    $interior_limpieza = $conn->real_escape_string($_POST['interior_limpieza'] ?? '');
     $lateral_izquierdo = $conn->real_escape_string($_POST['Lateral_Izquierdo'] ?? '');
     $lateral_derecho = $conn->real_escape_string($_POST['Lateral_Derecho'] ?? '');
     $frontal = $conn->real_escape_string($_POST['Frontal'] ?? '');
@@ -57,10 +57,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $alcoholimetia = $conn->real_escape_string($_POST['Alcoholimetia'] ?? '');
 
     // Niveles
-    $aceite = $conn->real_escape_string($_POST['Aceite'] ?? '');
-    $anticongelante = $conn->real_escape_string($_POST['Anticongelante'] ?? '');
-    $liquidofrenos = $conn->real_escape_string($_POST['LiquidoFrenos'] ?? '');
-    $direccionhidraulica = $conn->real_escape_string($_POST['DireccionHidraulica'] ?? '');
+    $aceite = $conn->real_escape_string($_POST['aceite'] ?? '');
+    $anticongelante = $conn->real_escape_string($_POST['anticongelante'] ?? '');
+    $liquidofrenos = $conn->real_escape_string($_POST['liquidofrenos'] ?? '');
+    $direccionhidraulica = $conn->real_escape_string($_POST['direccionhidraulica'] ?? '');
 
 
 
