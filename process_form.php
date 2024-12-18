@@ -2,6 +2,7 @@
 // Incluir el archivo de conexión a la base de datos
 include 'database.php';
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Usar el operador de fusión de null para evitar advertencias de claves indefinidas
     $operador = $conn->real_escape_string($_POST['operador'] ?? '');
@@ -9,6 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $unidad = $conn->real_escape_string($_POST['unidad'] ?? '');
     $fecha = $conn->real_escape_string($_POST['fecha'] ?? '');
 
+    
     // Interior
     $tablero = $conn->real_escape_string($_POST['tablero'] ?? '');
     $asientos = $conn->real_escape_string($_POST['asientos'] ?? '');
@@ -44,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $micas = $conn->real_escape_string($_POST['Micas'] ?? '');
     $bateria_1 = $conn->real_escape_string($_POST['Bateria_1'] ?? '');
     $bateria_2 = $conn->real_escape_string($_POST['Bateria_2'] ?? '');
-
+    
     // Limpieza
     $interior_limpieza = $conn->real_escape_string($_POST['interior_limpieza'] ?? '');
     $lateral_izquierdo = $conn->real_escape_string($_POST['Lateral_Izquierdo'] ?? '');
@@ -52,23 +54,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $frontal = $conn->real_escape_string($_POST['Frontal'] ?? '');
     $tracero = $conn->real_escape_string($_POST['Tracero'] ?? '');
     $tapetes = $conn->real_escape_string($_POST['Tapetes'] ?? '');
+    $foto = $conn->real_escape_string($_POST['Foto'] ?? '');
+    
     
     // Operador
     $uniforme = $conn->real_escape_string($_POST['Uniforme'] ?? '');
     $alcoholimetia = $conn->real_escape_string($_POST['Alcoholimetia'] ?? '');
-
+    
     // Niveles
     $aceite = $conn->real_escape_string($_POST['aceite'] ?? '');
     $anticongelante = $conn->real_escape_string($_POST['anticongelante'] ?? '');
     $liquidofrenos = $conn->real_escape_string($_POST['liquidofrenos'] ?? '');
     $direccionhidraulica = $conn->real_escape_string($_POST['direccionhidraulica'] ?? '');
+    
+    
+    $uploadDir = 'uploads/';
 
 
 
+        // Manejo de subida de archivos
+        $foto_tablero = $_FILES['foto_tablero']['name'] ? $uploadDir . basename($_FILES['foto_tablero']['name']) : null;
+        $foto_asientos = $_FILES['foto_asientos']['name'] ? $uploadDir . basename($_FILES['foto_asientos']['name']) : null;
+        $foto_intermitentes_funcionando = $_FILES['foto_tapiceria']['name'] ? $uploadDir . basename($_FILES['foto_intermitentes_funcionando']['name']) : null;
 
-    // Consulta SQL de inserción
-
-
+            // Mover archivos subidos al directorio de destino
+    if ($foto_tablero) {
+        move_uploaded_file($_FILES['foto_tablero']['tmp_name'], $foto_tablero);
+    }
+    if ($foto_asientos) {
+        move_uploaded_file($_FILES['foto_asientos']['tmp_name'], $foto_asientos);
+    }
+    if ($foto_intermitentes_funcionando) {
+        move_uploaded_file($_FILES['foto_tapiceria']['tmp_name'], $foto_intermitentes_funcionando);
+    }
+    
+    
+    
+    
     $sql = "INSERT INTO inspeccion_unidad (
     operador, planta, unidad, fecha, tablero, asientos, tapiceria, cinturones, pasamanos,  
     retrovisor_pasillo, botiquin, extintor, alarma_reversa, luces_interiores, luces_escalera,  
@@ -76,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     retrovisor, luces_funcionando, luces_navegacion, intermitentes_funcionando, 
     llantas_buen_estado, presion_llantas, retrovisores_laterales, carroceria, cristales, calcamonias,  
     placas, fuga, micas, bateria_1, bateria_2, interior_limpieza, lateral_izquierdo, lateral_derecho, frontal, tracero, uniforme, alcoholimetia,
-    aceite, anticongelante, liquidofrenos, direccionhidraulica
+    aceite, anticongelante, liquidofrenos, direccionhidraulica,foto_tablero, foto_asientos, foto_tapiceria
 ) VALUES (
     '$operador', '$planta', '$unidad', '$fecha', '$tablero', '$asientos', '$tapiceria', '$cinturones', '$pasamanos', 
     '$retrovisor_pasillo', '$botiquin', '$extintor', '$alarma_reversa', '$luces_interiores', '$luces_escalera', 
@@ -84,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     '$retrovisor', '$luces_funcionando', '$luces_navegacion', '$intermitentes_funcionando', 
     '$llantas_buen_estado', '$presion_llantas', '$retrovisores_laterales', '$carroceria', '$cristales', '$calcamonias', 
     '$placas', '$fuga', '$micas', '$bateria_1', '$bateria_2', '$interior_limpieza', '$lateral_izquierdo', '$lateral_derecho', '$frontal', '$tracero', '$uniforme', '$alcoholimetia',
-    '$aceite', '$anticongelante', '$liquidofrenos', '$direccionhidraulica'
+    '$aceite', '$anticongelante', '$liquidofrenos', '$direccionhidraulica', '$foto_tablero', '$foto_asientos', '$foto_tapiceria'
 )";
 
 

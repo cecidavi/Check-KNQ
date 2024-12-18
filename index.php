@@ -27,9 +27,7 @@
 </div>
 
             <script>
-    // Obtener la fecha actual en formato YYYY-MM-DD
     const today = new Date().toISOString().split('T')[0];
-    // Asignar la fecha actual al campo de fecha
     document.getElementById('fecha').value = today;
 </script>
 

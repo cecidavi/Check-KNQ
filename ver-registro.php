@@ -70,7 +70,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                         <td><?php echo htmlspecialchars($registro['tablero']); ?></td>
                         <td>
                             <?php if (!empty($registro['foto_tablero'])): ?>
-                                <img src="ruta/a/las/fotos/<?php echo htmlspecialchars($registro['foto_tablero']); ?>" alt="Foto Tablero" class="img-fluid" width="100">
+                                <img src="CHECK/uploads/<?php echo htmlspecialchars($registro['foto_tablero']); ?>" alt="foto_tablero" class="img-fluid" width="100">
                             <?php else: ?>
                                 No disponible
                             <?php endif; ?>
@@ -83,7 +83,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                         <td><?php echo htmlspecialchars($registro['asientos']); ?></td>
                         <td>
                             <?php if (!empty($registro['foto_asientos'])): ?>
-                                <img src="ruta/a/las/fotos/<?php echo htmlspecialchars($registro['foto_asientos']); ?>" alt="Foto Asientos" class="img-fluid" width="100">
+                                <img src="ruta/a/las/fotos/<?php echo htmlspecialchars($registro['foto_asientos']); ?>" alt="foto_Asientos" class="img-fluid" width="100">
                             <?php else: ?>
                                 No disponible
                             <?php endif; ?>
