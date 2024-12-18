@@ -1,6 +1,6 @@
 CREATE TABLE `inspeccion_unidad` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `responsable` varchar(255) NOT NULL,
+  `operador` varchar(255) NOT NULL,
   `planta` varchar(255) NOT NULL,
   `unidad` varchar(255) NOT NULL,
   `tablero` varchar(255) DEFAULT NULL,
@@ -42,6 +42,10 @@ CREATE TABLE `inspeccion_unidad` (
   `tracero` varchar(255) DEFAULT NULL,
   `uniforme` varchar(255) DEFAULT NULL,
   `alcoholimetia` varchar(255) DEFAULT NULL,
+  `aceite` varchar(255) DEFAULT NULL,
+  `anticongelante` varchar(255) DEFAULT NULL,
+  `liquidofrenos` varchar(255) DEFAULT NULL,
+  `direccionhidraulica` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 

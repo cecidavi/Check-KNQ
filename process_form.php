@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Usar el operador de fusión de null para evitar advertencias de claves indefinidas
     $operador = $conn->real_escape_string($_POST['operador'] ?? '');
     $planta = $conn->real_escape_string($_POST['planta'] ?? '');
-    $turno = $conn->real_escape_string($_POST['turno'] ?? '');
     $unidad = $conn->real_escape_string($_POST['unidad'] ?? '');
 
     // Interior
@@ -57,6 +56,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $uniforme = $conn->real_escape_string($_POST['Uniforme'] ?? '');
     $alcoholimetia = $conn->real_escape_string($_POST['Alcoholimetia'] ?? '');
 
+    // Niveles
+    $aceite = $conn->real_escape_string($_POST['Aceite'] ?? '');
+    $anticongelante = $conn->real_escape_string($_POST['Anticongelante'] ?? '');
+    $liquidofrenos = $conn->real_escape_string($_POST['LiquidoFrenos'] ?? '');
+    $direccionhidraulica = $conn->real_escape_string($_POST['DireccionHidraulica'] ?? '');
+
 
 
 
@@ -64,33 +69,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     $sql = "INSERT INTO inspeccion_unidad (
-    operador, planta, turno, unidad, tablero, asientos, tapiceria, cinturones, pasamanos,  
+    operador, planta, unidad, tablero, asientos, tapiceria, cinturones, pasamanos,  
     retrovisor_pasillo, botiquin, extintor, alarma_reversa, luces_interiores, luces_escalera,  
     puertas, salida_emergencia, asiento_operador, cables_expuestos, poliza_seguro, tarjeta_circulacion,  
     retrovisor, luces_funcionando, luces_navegacion, intermitentes_funcionando, 
-    llantas_buen_estado, presion_llantas, retrovisores_laterales, carroceria, cristales, cristales_comentarios, calcamonias, calcamonias_comentarios, 
-    placas, fuga, micas, bateria_1, bateria_2, interior_limpieza, lateral_izquierdo, lateral_derecho, frontal, tracero, uniforme, alcoholimetia
+    llantas_buen_estado, presion_llantas, retrovisores_laterales, carroceria, cristales, calcamonias,  
+    placas, fuga, micas, bateria_1, bateria_2, interior_limpieza, lateral_izquierdo, lateral_derecho, frontal, tracero, uniforme, alcoholimetia,
+    aceite, anticongelante, liquidofrenos, direccionhidraulica
 ) VALUES (
-    '$responsable', '$planta', '$turno', '$unidad', '$tablero', '$tablero_comentarios', 
-    '$asientos', '$asientos_comentarios', '$tapiceria', '$tapiceria_comentarios', 
-    '$cinturones', '$cinturones_comentarios', '$pasamanos', '$pasamanos_comentarios', 
-    '$retrovisor_pasillo', '$retrovisor_pasillo_comentarios', '$botiquin', '$botiquin_comentarios', 
-    '$extintor', '$extintor_comentarios', '$alarma_reversa', '$alarma_reversa_comentarios', 
-    '$luces_interiores', '$luces_interiores_comentarios', '$luces_escalera', '$luces_escalera_comentarios', 
-    '$puertas', '$puertas_comentarios', '$salida_emergencia', '$salida_emergencia_comentarios', 
-    '$asiento_operador', '$asiento_operador_comentarios', '$cables_expuestos', '$cables_expuestos_comentarios', 
-    '$poliza_seguro', '$poliza_seguro_comentarios', '$tarjeta_circulacion', '$tarjeta_circulacion_comentarios', 
-    '$retrovisor', '$retrovisor_comentarios', '$luces_funcionando', '$luces_funcionando_comentarios', 
-    '$luces_navegacion', '$luces_navegacion_comentarios', '$intermitentes_funcionando', '$intermitentes_funcionando_comentarios', 
-    '$llantas_buen_estado', '$llantas_buen_estado_comentarios', '$presion_llantas', '$presion_llantas_comentarios', 
-    '$retrovisores_laterales', '$retrovisores_laterales_comentarios', '$carroceria', '$carroceria_comentarios', 
-    '$cristales', '$cristales_comentarios', '$calcamonias', '$calcamonias_comentarios', 
-    '$placas', '$placas_comentarios', '$fuga', '$fuga_comentarios', 
-    '$micas', '$micas_comentarios', '$bateria_1', '$bateria_1_comentarios', 
-    '$bateria_2', '$bateria_2_comentarios', '$interior_limpieza', '$interior_limpieza_comentarios', 
-    '$lateral_izquierdo', '$lateral_izquierdo_comentarios', '$lateral_derecho', '$lateral_derecho_comentarios', 
-    '$frontal', '$frontal_comentarios', '$tracero', '$tracero_comentarios', 
-    '$uniforme', '$uniforme_comentarios', '$alcoholimetia', '$alcoholimetia_comentarios'
+    '$operador', '$planta', '$unidad', '$tablero', '$asientos', '$tapiceria', '$cinturones', '$pasamanos', 
+    '$retrovisor_pasillo', '$botiquin', '$extintor', '$alarma_reversa', '$luces_interiores', '$luces_escalera', 
+    '$puertas', '$salida_emergencia', '$asiento_operador', '$cables_expuestos', '$poliza_seguro', '$tarjeta_circulacion', 
+    '$retrovisor', '$luces_funcionando', '$luces_navegacion', '$intermitentes_funcionando', 
+    '$llantas_buen_estado', '$presion_llantas', '$retrovisores_laterales', '$carroceria', '$cristales', '$calcamonias', 
+    '$placas', '$fuga', '$micas', '$bateria_1', '$bateria_2', '$interior_limpieza', '$lateral_izquierdo', '$lateral_derecho', '$frontal', '$tracero', '$uniforme', '$alcoholimetia',
+    '$aceite', '$anticongelante', '$liquidofrenos', '$direccionhidraulica'
 )";
 
 
