@@ -12,7 +12,7 @@
         <img src="asset/knqlogo.png" alt="Logo KNQ" class="logo">
         <form action="process_form.php" method="post">
             <div class="form-group">
-                <label for="responsable">Responsable / Coordinador:</label>
+                <label for="responsable">Operador</label>
                 <input type="text" id="responsable" name="responsable" required>
             </div>
             <div class="form-group">
