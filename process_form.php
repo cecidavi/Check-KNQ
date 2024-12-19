@@ -75,7 +75,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Manejo de subida de archivos
         $foto_tablero = $_FILES['foto_tablero']['name'] ? $uploadDir . basename($_FILES['foto_tablero']['name']) : null;
         $foto_asientos = $_FILES['foto_asientos']['name'] ? $uploadDir . basename($_FILES['foto_asientos']['name']) : null;
-        $foto_intermitentes_funcionando = $_FILES['foto_tapiceria']['name'] ? $uploadDir . basename($_FILES['foto_intermitentes_funcionando']['name']) : null;
+        $foto_tapiceria = $_FILES['foto_tapiceria']['name'] ? $uploadDir . basename($_FILES['foto_tapiceria']['name']) : null;
+        $foto_aceite = $_FILES['foto_aceite']['name'] ? $uploadDir . basename($_FILES['foto_aceite']['name']) : null;
 
             // Mover archivos subidos al directorio de destino
     if ($foto_tablero) {
@@ -85,7 +86,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         move_uploaded_file($_FILES['foto_asientos']['tmp_name'], $foto_asientos);
     }
     if ($foto_intermitentes_funcionando) {
-        move_uploaded_file($_FILES['foto_tapiceria']['tmp_name'], $foto_intermitentes_funcionando);
+        move_uploaded_file($_FILES['foto_tapiceria']['tmp_name'], $foto_tapiceria);
+    }
+    if ($foto_aceite) {
+        move_uploaded_file($_FILES['foto_aceite']['tmp_name'], $foto_aceite);
     }
     
     
@@ -98,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     retrovisor, luces_funcionando, luces_navegacion, intermitentes_funcionando, 
     llantas_buen_estado, presion_llantas, retrovisores_laterales, carroceria, cristales, calcamonias,  
     placas, fuga, micas, bateria_1, bateria_2, interior_limpieza, lateral_izquierdo, lateral_derecho, frontal, tracero, uniforme, alcoholimetia,
-    aceite, anticongelante, liquidofrenos, direccionhidraulica,foto_tablero, foto_asientos, foto_tapiceria
+    aceite, anticongelante, liquidofrenos, direccionhidraulica,foto_tablero, foto_asientos, foto_tapiceria, foto_aceite
 ) VALUES (
     '$operador', '$planta', '$unidad', '$fecha', '$tablero', '$asientos', '$tapiceria', '$cinturones', '$pasamanos', 
     '$retrovisor_pasillo', '$botiquin', '$extintor', '$alarma_reversa', '$luces_interiores', '$luces_escalera', 
@@ -106,14 +110,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     '$retrovisor', '$luces_funcionando', '$luces_navegacion', '$intermitentes_funcionando', 
     '$llantas_buen_estado', '$presion_llantas', '$retrovisores_laterales', '$carroceria', '$cristales', '$calcamonias', 
     '$placas', '$fuga', '$micas', '$bateria_1', '$bateria_2', '$interior_limpieza', '$lateral_izquierdo', '$lateral_derecho', '$frontal', '$tracero', '$uniforme', '$alcoholimetia',
-    '$aceite', '$anticongelante', '$liquidofrenos', '$direccionhidraulica', '$foto_tablero', '$foto_asientos', '$foto_tapiceria'
+    '$aceite', '$anticongelante', '$liquidofrenos', '$direccionhidraulica', '$foto_tablero', '$foto_asientos', '$foto_tapiceria', '$foto_aceite'
 )";
 
 
 
     // Ejecutar la consulta
     if ($conn->query($sql) === TRUE) {
-        // Redirigir a otra página después de la inserción exitosa
         header('Location: index.php');
         exit();
     } else {
