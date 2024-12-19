@@ -42,7 +42,8 @@ label {
 
 input[type="text"],
 input[type="radio"],
-input[type="date"] {
+input[type="date"],
+input[type="file"] {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -81,7 +82,7 @@ button:hover {
 
     /* Oculta el texto "No se ha seleccionado ningún archivo" */
     input[type="file"] {
-        display: none;
+        display: 50px;
     }
 
     /* Estiliza el botón de subir archivos */
@@ -112,51 +113,62 @@ button:hover {
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 600px) {
     .container {
-        width: 95%; /* Aumenta el ancho del contenedor en pantallas más pequeñas */
-        padding: 15px; /* Ajusta el espaciado */
+        width: 95%;
+        padding: 15px;
     }
 
     h1 {
-        font-size: 1.5em; /* Ajusta el tamaño del título */
+        font-size: 1.5em;
     }
 
     .logo {
-        width: 120px; /* Ajusta el tamaño del logo */
+        width: 120px;
     }
 
     form {
-        padding: 10px; /* Reduce el espacio dentro del formulario */
+        padding: 10px; 
     }
 
     .form-group {
-        margin-bottom: 12px; /* Reduce los márgenes */
+        margin-bottom: 12px;
     }
 
     input[type="text"],
     input[type="radio"],
-    input[type="date"]
+    input[type="date"],
+    input[type="file"] {
+        padding: 6px; 
+    }
+
     button {
-        padding: 12px; /* Aumenta el área de clic para los campos y botones */
-        font-size: 16px; /* Aumenta el tamaño de la fuente para una mejor legibilidad */
-        border-radius: 5px; /* Bordes redondeados para hacerlo más estético */
+        padding: 12px; 
+        font-size: 16px; 
+        border-radius: 5px; 
     }
 
     table {
         width: 100%;
-        font-size: 12px; /* Reduce el tamaño de la fuente de la tabla */
-    }
-
-    th, td {
-        padding: 6px; /* Ajusta el espaciado de la tabla */
-    }
-
-    table {
-        display: block; /* Hace la tabla desplazable */
+        font-size: 12px; 
+        display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
 
     th, td {
-        display: block; /* Hace que las celdas se apilen en lugar de estar en una fila */
+        display: block;
+        padding: 6px;
+    }
+
+    .form-group {
+        margin-bottom: 10px; 
+    }
+
+    
+    .form-group input[type="radio"] {
+        margin-right: 5px; 
+    }
+
+    th {
+        background-color: #cce5ff;
     }
 }

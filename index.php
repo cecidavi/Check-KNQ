@@ -31,7 +31,7 @@
     document.getElementById('fecha').value = today;
 </script>
 
-            <h2>Unidad a Evaluar</h2>
+            <h2>Unidad</h2>
             <input type="text" name="unidad" required>
             <h2>Interior</h2>
             <table>
