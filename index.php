@@ -91,15 +91,15 @@
                     <td data-label="Opciones">
                         <div class="radio-group">
                             <label for="liquido_frenos_si">Sí</label>
-                            <input type="radio" id="liquido_frenos_si" name="liquido_frenos" value="si" required>
+                            <input type="radio" id="liquido_frenos_si" name="liquidofrenos" value="si" required>
                         </div>
                         <div class="radio-group">
                             <label for="liquido_frenos_no">No</label>
-                            <input type="radio" id="liquido_frenos_no" name="liquido_frenos" value="no" required>
+                            <input type="radio" id="liquido_frenos_no" name="liquidofrenos" value="no" required>
                         </div>
                         <div class="radio-group">
                             <label for="liquido_frenos_na">No Aplica</label>
-                            <input type="radio" id="liquido_frenos_na" name="liquido_frenos" value="No Aplica" required>
+                            <input type="radio" id="liquido_frenos_na" name="liquidofrenos" value="No Aplica" required>
                         </div>
                     </td>
                     <td data-label="Foto">
@@ -113,15 +113,15 @@
                     <td data-label="Opciones">
                         <div class="radio-group">
                             <label for="direccion_hidraulica_si">Sí</label>
-                            <input type="radio" id="direccion_hidraulica_si" name="direccion_hidraulica" value="si" required>
+                            <input type="radio" id="direccion_hidraulica_si" name="direccionhidraulica" value="si" required>
                         </div>
                         <div class="radio-group">
                             <label for="direccion_hidraulica_no">No</label>
-                            <input type="radio" id="direccion_hidraulica_no" name="direccion_hidraulica" value="no" required>
+                            <input type="radio" id="direccion_hidraulica_no" name="direccionhidraulica" value="no" required>
                         </div>
                         <div class="radio-group">
                             <label for="direccion_hidraulica_na">No Aplica</label>
-                            <input type="radio" id="direccion_hidraulica_na" name="direccion_hidraulica" value="No Aplica" required>
+                            <input type="radio" id="direccion_hidraulica_na" name="direccionhidraulica" value="No Aplica" required>
                         </div>
                     </td>
                     <td data-label="Foto">
@@ -757,20 +757,20 @@
                     <td data-label="Inspección">Fuga Agua / Disel / Otra</td>
                     <td data-label="Opciones">
                         <div class="radio-group">
-                            <label for="fuga_agua_si">Sí</label>
-                            <input type="radio" id="fuga_agua_si" name="fuga_agua" value="si" required> 
+                            <label for="fuga_si">Sí</label>
+                            <input type="radio" id="fuga_si" name="fuga" value="si" required> 
                         </div>
                         <div class="radio-group">
-                            <label for="fuga_agua_no">No</label>
-                            <input type="radio" id="fuga_agua_no" name="fuga_agua" value="no" required>
+                            <label for="fuga_no">No</label>
+                            <input type="radio" id="fuga_no" name="fuga" value="no" required>
                         </div>
                         <div class="radio-group">
                             <label for="fuga_agua_na">No Aplica</label>
-                            <input type="radio" id="fuga_agua_na" name="fuga_agua" value="No Aplica" required>
+                            <input type="radio" id="fuga_na" name="fuga" value="No Aplica" required>
                         </div>
                     </td>
                     <td data-label="Foto">
-                        <input type="file" name="foto_fuga_agua" required>
+                        <input type="file" name="foto_fuga" required>
                     </td>
                 </tr>
 
@@ -854,15 +854,15 @@
                     <td data-label="Opciones">
                         <div class="radio-group">
                             <label for="interior_si">Sí</label>
-                            <input type="radio" id="interior_si" name="interior" value="si" required>
+                            <input type="radio" id="interior_si" name="interior_limpieza" value="si" required>
                         </div>
                         <div class="radio-group">
                             <label for="interior_no">No</label>
-                            <input type="radio" id="interior_no" name="interior" value="no" required>
+                            <input type="radio" id="interior_no" name="interior_limpieza" value="no" required>
                         </div>
                         <div class="radio-group">
                             <label for="interior_na">No Aplica</label>
-                            <input type="radio" id="interior_na" name="interior" value="No Aplica" required>
+                            <input type="radio" id="interior_na" name="interior_limpieza" value="No Aplica" required>
                         </div>
                     </td>
                     <td data-label="Foto">
@@ -939,15 +939,15 @@
                     <td data-label="Opciones">
                         <div class="radio-group">
                             <label for="trasero_si">Sí</label>
-                            <input type="radio" id="trasero_si" name="trasero" value="si" required>
+                            <input type="radio" id="trasero_si" name="tracero" value="si" required>
                         </div>
                         <div class="radio-group">
                             <label for="trasero_no">No</label>
-                            <input type="radio" id="trasero_no" name="trasero" value="no" required>
+                            <input type="radio" id="trasero_no" name="tracero" value="no" required>
                         </div>
                         <div class="radio-group">
                             <label for="trasero_na">No Aplica</label>
-                            <input type="radio" id="trasero_na" name="trasero" value="No Aplica" required>
+                            <input type="radio" id="trasero_na" name="tracero" value="No Aplica" required>
                         </div>
                     </td>
                     <td data-label="Foto">
