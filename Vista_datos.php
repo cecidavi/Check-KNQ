@@ -1,12 +1,14 @@
 <?php
-// Incluir el archivo de conexión a la base de datos
-include('database.php'); // Asegúrate de que la ruta sea correcta
+include('database.php'); 
 
-// Consulta para obtener los datos
-$sql = "SELECT * FROM inspeccion_unidad"; // Obtiene todos los registros de la tabla inspeccion_unidad
-$result = $conn->query($sql);
+$fecha = isset($_GET['fecha']) ? $_GET['fecha'] : date('Y-m-d');
 
-// Verificar si se obtuvieron resultados
+$sql = "SELECT * FROM inspeccion_unidad WHERE fecha = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $fecha);
+$stmt->execute();
+$result = $stmt->get_result();
+
 if ($result->num_rows > 0) {
     $registros = $result->fetch_all(MYSQLI_ASSOC);
 } else {
@@ -27,7 +29,19 @@ if ($result->num_rows > 0) {
     <div class="container mt-4">
         <h1 class="text-center mb-4">Inspección de Unidades</h1>
 
-        <!-- Tabla para mostrar los resultados -->
+        <!-- Formulario de selección de fecha -->
+        <form class="mb-4" method="get" action="Vista_datos.php">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="fecha" class="form-label">Seleccionar fecha:</label>
+                    <input type="date" id="fecha" name="fecha" class="form-control" value="<?php echo htmlspecialchars($fecha); ?>">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary mt-4">Filtrar</button>
+                </div>
+            </div>
+        </form>
+
         <table class="table table-bordered table-striped">
             <thead class="table-dark">
                 <tr>
@@ -47,13 +61,13 @@ if ($result->num_rows > 0) {
                             <td><?php echo htmlspecialchars($registro['unidad']); ?></td>
                             <td><?php echo htmlspecialchars($registro['fecha']); ?></td>
                             <td>
-                            <a href="ver-registro.php?id=<?php echo $registro['id']; ?>" class="btn btn-warning btn-sm">Ver</a>
-                             </td>
+                                <a href="ver-registro.php?id=<?php echo $registro['id']; ?>" class="btn btn-warning btn-sm">Ver</a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
                     <tr>
-                        <td colspan="5" class="text-center">No hay registros en la base de datos.</td>
+                        <td colspan="5" class="text-center">No hay registros para la fecha seleccionada.</td>
                     </tr>
                 <?php endif; ?>
             </tbody>
