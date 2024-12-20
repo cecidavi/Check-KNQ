@@ -77,6 +77,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $foto_asientos = $_FILES['foto_asientos']['name'] ? $uploadDir . basename($_FILES['foto_asientos']['name']) : null;
         $foto_tapiceria = $_FILES['foto_tapiceria']['name'] ? $uploadDir . basename($_FILES['foto_tapiceria']['name']) : null;
         $foto_aceite = $_FILES['foto_aceite']['name'] ? $uploadDir . basename($_FILES['foto_aceite']['name']) : null;
+        $foto_anticongelante = $_FILES['foto_anticongelante']['name'] ? $uploadDir . basename($_FILES['foto_anticongelante']['name']) : null;
+        $foto_liquido_frenos = $_FILES['foto_liquido_frenos']['name'] ? $uploadDir . basename($_FILES['foto_liquido_frenos']['name']) : null;
+        $foto_direccion_hidraulica = $_FILES['foto_direccion_hidraulica']['name'] ? $uploadDir . basename($_FILES['foto_direccion_hidraulica']['name']) : null;
+        $foto_interior = $_FILES['foto_interior']['name'] ? $uploadDir . basename($_FILES['foto_interior']['name']) : null;
+        $foto_lateral_izquierdo = $_FILES['foto_lateral_izquierdo']['name'] ? $uploadDir . basename($_FILES['foto_lateral_izquierdo']['name']) : null;
+        $foto_lateral_derecho = $_FILES['foto_lateral_derecho']['name'] ? $uploadDir . basename($_FILES['foto_lateral_derecho']['name']) : null;
+        $foto_frontal = $_FILES['foto_frontal']['name'] ? $uploadDir . basename($_FILES['foto_frontal']['name']) : null;
+        $foto_tracero = $_FILES['foto_tracero']['name'] ? $uploadDir . basename($_FILES['foto_tracero']['name']) : null;
+
 
             // Mover archivos subidos al directorio de destino
     if ($foto_tablero) {
@@ -92,7 +101,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         move_uploaded_file($_FILES['foto_aceite']['tmp_name'], $foto_aceite);
     }
     
-    
+    if ($foto_anticongelante) {
+        move_uploaded_file($_FILES['foto_anticongelante']['tmp_name'], $foto_anticongelante);
+    }
+
+    if ($foto_liquido_frenos) {
+        move_uploaded_file($_FILES['foto_liquido_frenos']['tmp_name'], $foto_liquido_frenos);
+    }
+
+    if ($foto_direccion_hidraulica) {
+        move_uploaded_file($_FILES['foto_direccion_hidraulica']['tmp_name'], $foto_direccion_hidraulica);
+    }
+    if ($foto_interior) {
+        move_uploaded_file($_FILES['foto_interior']['tmp_name'], $foto_interior);
+    }
+    if ($foto_lateral_izquierdo) {
+        move_uploaded_file($_FILES['foto_lateral_izquierdo']['tmp_name'], $foto_lateral_izquierdo);
+    }
+
+    if ($foto_lateral_derecho) {
+        move_uploaded_file($_FILES['foto_lateral_derecho']['tmp_name'], $foto_lateral_derecho);
+    }
+
+    if ($foto_frontal) {
+        move_uploaded_file($_FILES['foto_frontal']['tmp_name'], $foto_frontal);
+    }
+
+    if ($foto_tracero) {
+        move_uploaded_file($_FILES['foto_tracero']['tmp_name'], $foto_tracero);
+    }
+
     
     
     $sql = "INSERT INTO inspeccion_unidad (
@@ -102,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     retrovisor, luces_funcionando, luces_navegacion, intermitentes_funcionando, 
     llantas_buen_estado, presion_llantas, retrovisores_laterales, carroceria, cristales, calcamonias,  
     placas, fuga, micas, bateria_1, bateria_2, interior_limpieza, lateral_izquierdo, lateral_derecho, frontal, tracero, uniforme, alcoholimetia,
-    aceite, anticongelante, liquidofrenos, direccionhidraulica,foto_tablero, foto_asientos, foto_tapiceria, foto_aceite
+    aceite, anticongelante, liquidofrenos, direccionhidraulica,foto_tablero, foto_asientos, foto_tapiceria, foto_aceite, foto_anticongelante, foto_liquido_frenos, foto_direccion_hidraulica, foto_interior, foto_lateral_izquierdo, foto_lateral_derecho, foto_frontal, foto_tracero
 ) VALUES (
     '$operador', '$planta', '$unidad', '$fecha', '$tablero', '$asientos', '$tapiceria', '$cinturones', '$pasamanos', 
     '$retrovisor_pasillo', '$botiquin', '$extintor', '$alarma_reversa', '$luces_interiores', '$luces_escalera', 
@@ -110,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     '$retrovisor', '$luces_funcionando', '$luces_navegacion', '$intermitentes_funcionando', 
     '$llantas_buen_estado', '$presion_llantas', '$retrovisores_laterales', '$carroceria', '$cristales', '$calcamonias', 
     '$placas', '$fuga', '$micas', '$bateria_1', '$bateria_2', '$interior_limpieza', '$lateral_izquierdo', '$lateral_derecho', '$frontal', '$tracero', '$uniforme', '$alcoholimetria',
-    '$aceite', '$anticongelante', '$liquidofrenos', '$direccionhidraulica', '$foto_tablero', '$foto_asientos', '$foto_tapiceria', '$foto_aceite'
+    '$aceite', '$anticongelante', '$liquidofrenos', '$direccionhidraulica', '$foto_tablero', '$foto_asientos', '$foto_tapiceria', '$foto_aceite', '$foto_anticongelante', '$foto_liquido_frenos', '$foto_direccion_hidraulica', '$foto_interior', '$foto_lateral_izquierdo', '$foto_lateral_derecho', '$foto_frontal', '$foto_tracero'
 )";
 
 

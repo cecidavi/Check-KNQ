@@ -136,7 +136,6 @@
                 <tr>
                     <th>Inspección</th>
                     <th>Opcion</th>
-                    <th>Foto</th>
                 </tr>
 
 
@@ -156,9 +155,6 @@
                     <label for="tablero_na">No Aplica</label>
                     <input type="radio" id="tablero_na" name="tablero" value="No Aplica" required>
                 </div>
-            </td>
-            <td data-label="Foto">
-                <input type="file" name="foto_tablero" required>
             </td>
         </tr>
     </tbody>
@@ -180,9 +176,6 @@
                             <input type="radio" id="asientos_na" name="asientos" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_asientos" required>
-                    </td>
                 </tr>
                 </tbody>
 
@@ -203,9 +196,6 @@
                             <input type="radio" id="tapiceria_na" name="tapiceria" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_tapiceria" required>
-                    </td>
                 </tr>
                 <tr>
                     <td data-label="Inspección">Cinturones Firmes</td>
@@ -222,9 +212,6 @@
                             <label for="cinturones_na">No Aplica</label>
                             <input type="radio" id="cinturones_na" name="cinturones" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_cinturones" required>
                     </td>
                 </tr>
         
@@ -244,9 +231,6 @@
                             <input type="radio" id="pasamanos_na" name="pasamanos" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_pasamanos" required>
-                    </td>
 
                 </tr>
                 <tr>
@@ -265,9 +249,6 @@
                             <input type="radio" id="retrovisor_pasillo_na" name="retrovisor_pasillo" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_retrovisor_pasillo" required>
-                    </td>
                 </tr>
                 <tr>
                     <td data-label="Inspección">Botiquin</td>
@@ -284,9 +265,6 @@
                             <label for="botiquin_na">No Aplica</label>
                             <input type="radio" id="botiquin_na" name="botiquin" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_botiquin" required>
                     </td>
                     
                 </tr>
@@ -306,9 +284,6 @@
                             <input type="radio" id="extintor_na" name="extintor" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_extintor" required>
-                    </td>
 
                 </tr>          
                 <tr>
@@ -326,9 +301,6 @@
                             <label for="alarma_reversa_na">No Aplica</label>
                             <input type="radio" id="alarma_reversa_na" name="alarma_reversa" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_alarma_reversa" required>
                     </td>
 
 
@@ -349,9 +321,6 @@
                             <input type="radio" id="luces_interiores_na" name="luces_interiores" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_luces_interiores" required>
-                    </td>
                 </tr>    
 
                 <tr>
@@ -369,9 +338,6 @@
                             <label for="luces_escalera_na">No Aplica</label>
                             <input type="radio" id="luces_escalera_na" name="luces_escalera" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_luces_escalera" required>
                     </td>
 
 
@@ -392,9 +358,6 @@
                             <input type="radio" id="puertas_na" name="puertas" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_puertas" required>
-                    </td>
                     
                 </tr>
                 <tr>
@@ -412,9 +375,6 @@
                             <label for="salida_emergencia_na">No Aplica</label>
                             <input type="radio" id="salida_emergencia_na" name="salida_emergencia" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_salida_emergencia" required>
                     </td>
                     
                 </tr>
@@ -434,9 +394,6 @@
                             <input type="radio" id="asiento_operador_na" name="asiento_operador" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_asiento_operador" required>
-                    </td>
 
                 </tr>
                 <tr>
@@ -454,9 +411,6 @@
                             <label for="cables_expuestos_na">No Aplica</label>
                             <input type="radio" id="cables_expuestos_na" name="cables_expuestos" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_cables_expuestos" required>
                     </td>
 
                 </tr>
@@ -476,9 +430,6 @@
                             <input type="radio" id="poliza_seguro_na" name="poliza_seguro" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_poliza_seguro" required>
-                    </td>
 
                 </tr>
                 <tr>
@@ -496,9 +447,6 @@
                             <label for="tarjeta_circulacion_na">No Aplica</label>
                             <input type="radio" id="tarjeta_circulacion_na" name="tarjeta_circulacion" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_tarjeta_circulacion" required>
                     </td>
                     
                 </tr>
@@ -518,9 +466,6 @@
                             <input type="radio" id="retrovisor_na" name="retrovisor" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_retrovisor" required>
-                    </td>
 
                 </tr>
             </table>
@@ -530,7 +475,6 @@
                 <tr>
                     <th>Inspección</th>
                     <th>Opcion</th>
-                    <th>Foto</th>
                 </tr>
                 <tr>
                     <td data-label="Inspección">Luces Funcionando</td>
@@ -547,9 +491,6 @@
                             <label for="luces_funcionando_na">No Aplica</label>
                             <input type="radio" id="luces_funcionando_na" name="luces_funcionando" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_luces_funcionando" required>
                     </td>
 
                 </tr>
@@ -568,9 +509,6 @@
                             <label for="luces_navegacion_na">No Aplica</label>
                             <input type="radio" id="luces_navegacion_na" name="luces_navegacion" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_luces_navegacion" required>
                     </td>
 
                 </tr>
@@ -592,9 +530,6 @@
                             <input type="radio" id="intermitentes_funcionando_na" name="intermitentes_funcionando" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_intermitentes_funcionando" required>
-                    </td>
 
                 </tr>
 
@@ -614,9 +549,6 @@
                             <label for="llantas_buen_estado_na">No Aplica</label>
                             <input type="radio" id="llantas_buen_estado_na" name="llantas_buen_estado" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_llantas_buen_estado" required>
                     </td>
 
                 </tr>
@@ -638,9 +570,6 @@
                             <input type="radio" id="presion_llantas_na" name="presion_llantas" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_presion_llantas" required>
-                    </td>
                 </tr>
 
                 <tr>
@@ -658,9 +587,6 @@
                             <label for="retrovisores_laterales_na">No Aplica</label>
                             <input type="radio" id="retrovisores_laterales_na" name="retrovisores_laterales" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_retrovisores_laterales" required>
                     </td>
 
                 </tr>
@@ -682,9 +608,6 @@
                             <input type="radio" id="carroceria_na" name="carroceria" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_carroceria" required>
-                    </td>
 
                 </tr>
                 <tr>
@@ -702,9 +625,6 @@
                             <label for="cristales_na">No Aplica</label>
                             <input type="radio" id="cristales_na" name="cristales" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_cristales" required>
                     </td>
 
                 </tr>
@@ -726,9 +646,6 @@
                             <input type="radio" id="calcamonias_na" name="calcamonias" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_calcamonias" required>
-                    </td>
                 </tr>
 
                 <tr>
@@ -746,9 +663,6 @@
                             <label for="placas_na">No Aplica</label>
                             <input type="radio" id="placas_na" name="placas" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_placas" required>
                     </td>
                 </tr>
 
@@ -769,9 +683,6 @@
                             <input type="radio" id="fuga_na" name="fuga" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_fuga" required>
-                    </td>
                 </tr>
 
 
@@ -790,9 +701,6 @@
                             <label for="micas_na">No Aplica</label>
                             <input type="radio" id="micas_na" name="micas" value="No Aplica" required>
                         </div>
-                    </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_micas" required>
                     </td>
                 </tr>
 
@@ -813,9 +721,6 @@
                             <input type="radio" id="bateria_1_na" name="bateria_1" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_bateria_1" required>
-                    </td>
                 </tr>
 
 
@@ -835,14 +740,11 @@
                             <input type="radio" id="bateria_2_na" name="bateria_2" value="No Aplica" required>
                         </div>
                     </td>
-                    <td data-label="Foto">
-                        <input type="file" name="foto_bateria_2" required>
-                    </td>
 
                 </tr>
             </table>
 
-            <h2>Limpieza</h2>
+            <h2>Fotos camion</h2>
             <table>
                 <tr>
                     <th>Inspección</th>
@@ -951,7 +853,7 @@
                         </div>
                     </td>
                     <td data-label="Foto">
-                        <input type="file" name="foto_trasero" required>
+                        <input type="file" name="foto_tracero" required>
                     </td>
 
 
